@@ -1,5 +1,6 @@
-# Editor backups
+# Editor, diff backups
 *~
+*.bak
 # libtool temp dir
 .libs
 # .svn files
@@ -19,6 +20,8 @@ Makefile.in
 /libltdl
 
 # Integrated Development Evironment files
+.clang-format
+gnatinspect.db
 GPATH
 GRTAGS
 GSYMS
