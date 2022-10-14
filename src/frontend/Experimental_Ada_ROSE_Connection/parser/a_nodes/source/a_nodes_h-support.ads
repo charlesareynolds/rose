@@ -7,7 +7,7 @@ package a_nodes_h.Support is
    package ICE renames IC.Extensions;
    package ICS renames IC.Strings;
 
-   Invalid_bool         : constant ICE.bool := IC.False;
+   Invalid_bool         : constant ICE.bool := ICE.False;
    Invalid_chars_ptr    : constant ICS.chars_ptr := ICS.Null_Ptr;
    Invalid_ID           : constant := -1;
    Empty_ID             : constant := 0;
@@ -517,7 +517,7 @@ package a_nodes_h.Support is
      (Item : in Boolean)
       return ICE.bool
    is
-     (if Item then IC.True else IC.False);
+     (if Item then ICE.True else ICE.False);
 
    type Unit_ID_Array is array (Positive range <>) of aliased Unit_ID;
    -- Not called _Ptr so we don't forget a pointer to this is not the same as a
