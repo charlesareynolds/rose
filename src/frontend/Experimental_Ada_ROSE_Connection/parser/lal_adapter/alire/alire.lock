@@ -46,8 +46,8 @@ crate = "gnatcoll"
 fulfilment = "solved"
 pinned = false
 shared = false
-transitivity = "indirect"
-versions = "(^22) & (~22.0.0)"
+transitivity = "direct"
+versions = "(^22.0.0) & (~22.0.0)"
 [solution.state.release]
 authors = [
 "AdaCore",

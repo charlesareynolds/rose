@@ -7,3 +7,5 @@ maintainers = ["Charles Reynolds <charlesareynolds@gmail.com>"]
 maintainers-logins = ["charlesareynolds"]
 [[depends-on]]
 libadalang = "^22.0.0"
+[[depends-on]]
+gnatcoll = "^22.0.0"

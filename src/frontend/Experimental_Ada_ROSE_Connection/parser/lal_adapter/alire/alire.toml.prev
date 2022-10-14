@@ -5,3 +5,5 @@ version = "0.1.0-dev"
 authors = ["Charles Reynolds"]
 maintainers = ["Charles Reynolds <charlesareynolds@gmail.com>"]
 maintainers-logins = ["charlesareynolds"]
+[[depends-on]]
+libadalang = "^22.0.0"
