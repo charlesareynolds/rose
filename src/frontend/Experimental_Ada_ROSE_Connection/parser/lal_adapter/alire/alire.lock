@@ -1,0 +1,456 @@
+# THIS IS A MACHINE-GENERATED FILE. DO NOT EDIT MANUALLY.
+
+[solution]
+[solution.context]
+solved = true
+[[solution.state]]
+crate = "gnat"
+fulfilment = "solved"
+pinned = false
+shared = true
+transitivity = "indirect"
+versions = "(/=2020) & (>=11)"
+[solution.state.release]
+auto-gpr-with = false
+description = "The GNAT Ada compiler - Native"
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnat_native"
+provides = [
+"gnat=11.2.4",
+]
+version = "11.2.4"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.environment]
+[solution.state.release.environment.PATH]
+prepend = "${CRATE_ROOT}/bin"
+[solution.state.release.origin]
+binary = true
+hashes = [
+"sha256:2f9c5d6de6d1c26bb1cee3438dcdf0277d231bfd7129d441b5e7253558da340e",
+]
+url = "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnat-11.2.0-4/gnat-x86_64-windows64-11.2.0-4.tar.gz"
+[[solution.state]]
+crate = "gnatcoll"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "(^22) & (~22.0.0)"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "GNAT Components Collection - Core packages"
+licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnatcoll"
+project-files = [
+"gnatcoll.gpr",
+]
+tags = [
+"gnatcoll",
+"json",
+"email",
+"refcount",
+"projects",
+"gpr",
+"vfs",
+]
+version = "22.0.0"
+website = "https://github.com/adacore/gnatcoll-core"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.gpr-externals]
+GNATCOLL_ATOMICS = [
+"intrinsic",
+"mutex",
+]
+GNATCOLL_BUILD_MODE = [
+"DEBUG",
+"PROD",
+]
+GNATCOLL_OS = [
+"windows",
+"unix",
+"osx",
+]
+LIBRARY_TYPE = [
+"static",
+"relocatable",
+"static-pic",
+]
+[solution.state.release.gpr-set-externals]
+GNATCOLL_BUILD_MODE = "PROD"
+GNATCOLL_OS = "windows"
+GNATCOLL_VERSION = "22.0.0"
+[solution.state.release.origin]
+hashes = [
+"sha512:620c2f23bc047b82e659c7282d6306bc9c8b09e7ec428a9e39722802164ca2962628e5d91a33a00921707033d121bd7a179fffd4a439a0b48df21869b35e82d9",
+]
+url = "https://github.com/AdaCore/gnatcoll-core/archive/v22.0.0/gnatcoll-core-22.0.0.zip"
+[[solution.state.release.depends-on]]
+libgpr = "~22.0.0"
+[[solution.state]]
+crate = "gnatcoll_gmp"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "^22"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "GNAT Components Collection - GNU Multiple Precision Arithmetic binding"
+licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnatcoll_gmp"
+project-files = [
+"gmp/gnatcoll_gmp.gpr",
+]
+tags = [
+"gnatcoll",
+"bindings",
+"gmp",
+"arbitrary",
+"precision",
+"arithmetic",
+]
+version = "22.0.0"
+website = "https://github.com/adacore/gnatcoll-bindings"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.gpr-externals]
+GNATCOLL_BUILD_MODE = [
+"DEBUG",
+"PROD",
+]
+LIBRARY_TYPE = [
+"static",
+"relocatable",
+"static-pic",
+]
+[solution.state.release.origin]
+hashes = [
+"sha512:f3732e5de05b8c3e82b2ac541f378b4890860ce1207cb44638c71e30dc149d188345f7b5004065344af21c5dc8628deaad8e70b47ab4692c09676633aa6444d8",
+]
+url = "https://github.com/AdaCore/gnatcoll-bindings/archive/v22.0.0/gnatcoll-bindings-22.0.0.zip"
+[[solution.state.release.depends-on]]
+gnatcoll = "~22.0.0"
+libgmp = "*"
+[[solution.state]]
+crate = "gnatcoll_iconv"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "^22"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "GNAT Components Collection - iconv binding"
+licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnatcoll_iconv"
+project-files = [
+"iconv/gnatcoll_iconv.gpr",
+]
+tags = [
+"gnatcoll",
+"bindings",
+"iconv",
+"i18n",
+]
+version = "22.0.0"
+website = "https://github.com/adacore/gnatcoll-bindings"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.gpr-externals]
+GNATCOLL_BUILD_MODE = [
+"DEBUG",
+"PROD",
+]
+LIBRARY_TYPE = [
+"static",
+"relocatable",
+"static-pic",
+]
+[solution.state.release.origin]
+hashes = [
+"sha512:f3732e5de05b8c3e82b2ac541f378b4890860ce1207cb44638c71e30dc149d188345f7b5004065344af21c5dc8628deaad8e70b47ab4692c09676633aa6444d8",
+]
+url = "https://github.com/AdaCore/gnatcoll-bindings/archive/v22.0.0/gnatcoll-bindings-22.0.0.zip"
+[[solution.state.release.depends-on]]
+gnatcoll = "~22.0.0"
+libiconv = "*"
+[[solution.state]]
+crate = "langkit_support"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "^22"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "Runtime support library for Langkit-generated libraries"
+licenses = "GPL-3.0-only WITH GCC-exception-3.1"
+maintainers = [
+"Pierre-Marie de Rodat <pmderodat@kawie.fr>",
+]
+maintainers-logins = [
+"pmderodat",
+]
+name = "langkit_support"
+version = "22.0.0"
+website = "https://github.com/AdaCore/langkit"
+[solution.state.release.origin]
+hashes = [
+"sha512:d43df3a95d87cdbdfbe94dd353fbc7dc746f27e6d71576cfbeca5f3972d37832dd406b5945623da2e93b18133baf6c6bf12d1b7a14fd2e403d2c6f2f41cb6b3b",
+]
+url = "https://github.com/AdaCore/langkit/releases/download/v22.0.0/langkit_support-22.0.0.tar.gz"
+[[solution.state.release.depends-on]]
+gnatcoll = "^22"
+gnatcoll_iconv = "^22"
+[[solution.state]]
+crate = "libadalang"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "direct"
+versions = "^22.0.0"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "Ada semantic analysis library"
+licenses = "GPL-3.0-only WITH GCC-exception-3.1"
+maintainers = [
+"Pierre-Marie de Rodat <pmderodat@kawie.fr>",
+]
+maintainers-logins = [
+"pmderodat",
+]
+name = "libadalang"
+tags = [
+"libadalang",
+"static-analysis",
+]
+version = "22.0.0"
+website = "https://github.com/AdaCore/libadalang"
+[solution.state.release.origin]
+hashes = [
+"sha512:5f365aa471ed22cd30f3273ab8aa253cb5f1d6be23dd48eb29e6d776e07729412e75d9820447eb7626dce16fcde4f05cf40811cd7b96722e9c0c5a0315861210",
+]
+url = "https://github.com/AdaCore/libadalang/releases/download/v22.0.0/libadalang-22.0.0.tar.gz"
+[[solution.state.release.depends-on]]
+gnatcoll = "^22"
+gnatcoll_gmp = "^22"
+gnatcoll_iconv = "^22"
+langkit_support = "^22"
+[[solution.state]]
+crate = "libgmp"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "*"
+[solution.state.release]
+description = "The GNU Multiple Precision Arithmetic Library"
+licenses = "LGPL-3.0-only"
+maintainers = [
+"derodat@adacore.com",
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"pmderodat",
+"Fabien-Chouteau",
+]
+name = "libgmp"
+notes = "Provided by system package: mingw-w64-x86_64-gmp"
+version = "6.2.1"
+[solution.state.release.origin]
+url = "system:mingw-w64-x86_64-gmp"
+[[solution.state]]
+crate = "libgpr"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "~22.0.0"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "GNAT Project File Library"
+licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "libgpr"
+project-files = [
+"gpr/gpr.gpr",
+]
+version = "22.0.0"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.gpr-externals]
+GPR_BUILD = [
+"debug",
+"production",
+"coverage",
+"profiling",
+]
+LIBRARY_TYPE = [
+"static",
+"relocatable",
+"static-pic",
+]
+[solution.state.release.origin]
+hashes = [
+"sha512:30e39dccd28aa8d0c23dc76704a0ae1f27f181c807587472daadd8693489f3a53dda3c2bfa5c8fc754aa0ceb9e4be063213b46f833d3845ab204276640f40a2d",
+]
+url = "https://github.com/AdaCore/gprbuild/archive/v22.0.0/gprbuild-22.0.0.zip"
+[[solution.state.release.depends-on]]
+gnat = "/=2020"
+xmlada = "~22.0.0"
+[[solution.state]]
+crate = "libiconv"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "*"
+[solution.state.release]
+description = "GNU libiconv"
+licenses = "LGPL-2.1-only"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "libiconv"
+notes = "Provided by system package: mingw-w64-x86_64-libiconv"
+version = "1.17.0"
+[solution.state.release.origin]
+url = "system:mingw-w64-x86_64-libiconv"
+[[solution.state]]
+crate = "xmlada"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "~22.0.0"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "The XML/Ada toolkit"
+licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "xmlada"
+project-files = [
+"distrib/xmlada.gpr",
+"dom/xmlada_dom.gpr",
+"sax/xmlada_sax.gpr",
+"input_sources/xmlada_input.gpr",
+"schema/xmlada_schema.gpr",
+"unicode/xmlada_unicode.gpr",
+]
+version = "22.0.0"
+website = "https://github.com/AdaCore/xmlada"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.gpr-externals]
+LIBRARY_TYPE = [
+"static",
+"relocatable",
+"static-pic",
+]
+XMLADA_BUILD_MODE = [
+"distrib",
+"Debug",
+"Production",
+"profile",
+"coverage",
+"nochecks",
+]
+[solution.state.release.origin]
+hashes = [
+"sha512:b322ae27f386dc530784f129af9b2f456302f53752d11829b687f90ae60424b1530a28c0667a186647f3bf416766a4633366af26b8d831a5a7e6c16c355c593b",
+]
+url = "https://github.com/AdaCore/xmlada/archive/v22.0.0/xmlada-22.0.0.zip"
+[[solution.state.release.actions]]
+command = [
+"sh",
+"configure",
+"--build=x86_64-w64-mingw32",
+]
+directory = "."
+type = "post-fetch"
+[[solution.state.release.depends-on]]
+gnat = ">=11"
+

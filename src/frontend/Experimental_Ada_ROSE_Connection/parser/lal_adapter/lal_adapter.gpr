@@ -1,5 +1,6 @@
-with "gnatcoll";
-with "libadalang";
+--with "gnatcoll";
+--with "libadalang";
+with "config/lal_adapter_config.gpr";
 
 library project LAL_Adapter is
 
