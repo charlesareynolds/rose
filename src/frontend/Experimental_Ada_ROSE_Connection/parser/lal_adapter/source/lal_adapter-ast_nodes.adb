@@ -20,7 +20,7 @@ package body LAL_Adapter.AST_Nodes is
 
    overriding procedure Process (This : in Expr) is
    begin
-
+      Process (Expr_Parent (This));
       raise Program_Error with "Unimplemented procedure Process";
    end Process;
 
@@ -30,7 +30,7 @@ package body LAL_Adapter.AST_Nodes is
 
    overriding procedure Process (This : in Basic_Decl) is
    begin
-
+      Process (Basic_Decl_Parent (This));
       raise Program_Error with "Unimplemented procedure Process";
    end Process;
 
@@ -3361,6 +3361,7 @@ package body LAL_Adapter.AST_Nodes is
    overriding procedure Process (This : in With_Private_Absent) is
    begin
 
+
       raise Program_Error with "Unimplemented procedure Process";
    end Process;
 
@@ -3383,7 +3384,7 @@ package body LAL_Adapter.AST_Nodes is
    begin -- To_Ada_Node
       case LAL.Kind (This) is
          when LALC.Ada_Abort_Absent =>
-            return new Abort_Absent;
+            return new Abort_Absent (This);
          when LALC.Ada_Abort_Present =>
             return new Abort_Present;
          when LALC.Ada_Abort_Stmt =>

@@ -15,14 +15,14 @@ package LAL_Adapter.AST_Nodes is
      (This : in Ada_Node);
    
    type Expr is new Ada_Node with private;
-   overriding
-   procedure Process 
+   subtype Expr_Parent is Ada_Node;
+   overriding procedure Process 
      (This : in Expr);
    --  Base class for expressions.
 
    type Basic_Decl is new Ada_Node with private;
-   overriding
-   procedure Process 
+   subtype Basic_Decl_Parent is Ada_Node;
+   overriding procedure Process 
      (This : in Basic_Decl);
    --  Root class for an Ada declaration (RM 3.1). A declaration associates
    --  a name with a language entity, for example a type or a variable.

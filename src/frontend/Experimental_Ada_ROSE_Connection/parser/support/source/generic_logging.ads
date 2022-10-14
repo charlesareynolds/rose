@@ -6,8 +6,9 @@ private with Ada.Finalization;
 -- Note:
 -- If this is instantiated multiple times inside nested declarative regions
 -- (e.g. nested subprograms) and the resulting package is "use"d, then calls on
--- Log, etc. in the inner statements will be ambiguious and will not compile.
+-- Log, etc. in the inner regions will be ambiguious and will not compile.
 -- Solution: Prefix the call with the instantiated package name.
+-- Solution 2: Put the "use" statement at the bottom of its declarative region.
 generic
    Module_Name : in string;
 package Generic_Logging is

@@ -5,6 +5,16 @@ with Langkit_Support.Text;
 With System.Address_Image;
 
 package body Lal_Adapter.Node is
+   
+   function From_Integer (This : in Integer) return Float is 
+   begin 
+      return 1.0; 
+   end From_Integer;
+   
+   function From_Integer (This : in Integer) return Integer is 
+   begin 
+      return 0; 
+   end From_Integer;
 
    package Slocs renames Langkit_Support.Slocs;
    package Text renames Langkit_Support.Text;
@@ -4163,11 +4173,6 @@ package body Lal_Adapter.Node is
 
    -- Do_Pre_Child_Processing and Do_Post_Child_Processing below are preserved
    -- from Asis_Adapter for familiarity.
-   --
-   -- Asis_Adapter.Unit.Process indirectly calls Asis_Adapter.Element.
-   -- Process_Element_Tree, which calls an instance of generic
-   -- Asis.Iterator.Traverse_Element, instantiated with
-   -- Do_Pre_Child_Processing and Do_Post_Child_Processing.
    --
    -- Lal_Adapter.Unit.Process indirectly calls LAL.Compilation_Unit.Traverse
    -- with a pointer that indrectly calls Lal_Adapter.Node.Process, which calls

@@ -734,7 +734,7 @@ package body Lal_Adapter.Unit is
       for Dependency of Dependencies Loop
          Log (Text.Image (Dependency.Full_Sloc_Image));
       end loop;
-           Start_Output;
+      Start_Output;
       -- Calls Process_Node, which may raise one of our exceptions:
       Traverse_Visit_Status := The_Compilation_Unit.Traverse (Process_Node'Access);
       Log ("Traverse_Visit_Status => " & Traverse_Visit_Status'Img);
