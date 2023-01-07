@@ -11,6 +11,13 @@
 *.ali
 *.adt
 
+# Alire IDE files:
+alire.toml
+alire/
+
+# GNAT binaries:
+bin/
+
 # (Temporary for now) graph files:
 *.dot
 
@@ -43,4 +50,5 @@ research/root_h.ads
 # GNAT Ada to C:
 # g++ -c -gnatceg:
 research/a_nodes_h.h
+
 

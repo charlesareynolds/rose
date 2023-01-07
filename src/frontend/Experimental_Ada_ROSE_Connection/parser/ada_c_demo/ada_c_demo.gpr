@@ -1,8 +1,13 @@
+with "config/ada_c_demo_config.gpr";
+
 project Ada_C_Demo is
 
    for Languages use ("Ada", "C");
-   for Source_Dirs use ("./source");
+   for Source_Dirs use ("./source", "config/");
    for Object_Dir use "./obj";
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+
    for Main use
      ("ada_main.adb",
       "c_main.c",
@@ -11,6 +16,18 @@ project Ada_C_Demo is
       "ada_c_ada_main.adb",
       "c_ada_c_main.c",
       "c_c_ada_main.c");
+	  
+   package Compiler is
+      for Default_Switches ("Ada") use Ada_C_Demo_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;	  
 
 end Ada_C_Demo;
 
